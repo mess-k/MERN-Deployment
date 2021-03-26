@@ -1,0 +1,31 @@
+GET http://localhost:8000/api/pets HTTP/1.1
+
+###
+
+POST http://localhost:8000/api/pets/new HTTP/1.1
+Content-Type: application/json 
+
+{
+    "name":"onyx",
+    "type":"dog",
+    "description":"doesnt like when you touch his feet"
+}
+
+### 
+
+GET http://localhost:8000/api/pets/605dff22c42b752d58476e23 HTTP/1.1
+
+###
+
+PUT http://localhost:8000/api/pets/update/605dff22c42b752d58476e23 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"tofu",
+    "type":"cat",
+    "description":"loves the sun"
+}
+
+###
+
+DELETE http://localhost:8000/api/pets/delete/605e000465a98d4a043f08ca HTTP/1.1
